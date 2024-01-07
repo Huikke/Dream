@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1ehudttdgku5"]
+[gd_scene load_steps=6 format=3 uid="uid://c1ehudttdgku5"]
 
-[ext_resource type="Script" path="res://scenes/levels/main.gd" id="1_m20m4"]
 [ext_resource type="PackedScene" uid="uid://bxtjs1gov5wqi" path="res://scenes/areas/rectangle_area.tscn" id="1_ngjr4"]
 [ext_resource type="Texture2D" uid="uid://033aysg4443c" path="res://graphics/walls.png" id="2_rhcbd"]
 [ext_resource type="PackedScene" uid="uid://coh8onipbrpv" path="res://scenes/player/player.tscn" id="2_yws6n"]
@@ -68,7 +67,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_45lld")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_m20m4")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -86,5 +84,3 @@ position = Vector2(-502, 0)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-
-[connection signal="player_entered_area" from="RectangleArea" to="." method="_on_rectangle_area_player_entered_area"]

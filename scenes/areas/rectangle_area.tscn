@@ -13,4 +13,3 @@ position = Vector2(75, 75)
 shape = SubResource("RectangleShape2D_kyvcl")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
