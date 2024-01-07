@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1ehudttdgku5"]
+[gd_scene load_steps=4 format=3 uid="uid://c1ehudttdgku5"]
 
+[ext_resource type="Texture2D" uid="uid://dloj4855pfwvk" path="res://graphics/floor.png" id="1_47y4l"]
 [ext_resource type="PackedScene" uid="uid://bxtjs1gov5wqi" path="res://scenes/areas/rectangle_area.tscn" id="1_ngjr4"]
 [ext_resource type="PackedScene" uid="uid://coh8onipbrpv" path="res://scenes/player/player.tscn" id="2_yws6n"]
 
-[node name="main" type="Node2D"]
+[node name="Main" type="Node2D"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(1, -1)
+texture = ExtResource("1_47y4l")
+region_enabled = true
+region_rect = Rect2(-888.618, -477.677, 10000, 10000)
 
 [node name="RectangleArea" parent="." instance=ExtResource("1_ngjr4")]
 position = Vector2(587, 227)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_yws6n")]
+[node name="Player" parent="." instance=ExtResource("2_yws6n")]
 position = Vector2(327, 301)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
