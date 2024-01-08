@@ -15,7 +15,6 @@ func _process(_delta):
 	move_and_slide()
 	
 	if get_slide_collision_count() > 0:
-		print(start_position)
 		position = start_position
 		velocity = Vector2(0,0)
 
