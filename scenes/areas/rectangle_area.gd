@@ -11,4 +11,6 @@ func _draw():
 
 
 func _on_body_entered(body):
+	if "area_reached" in body:
+		body.area_reached()
 	player_entered_area.emit()
