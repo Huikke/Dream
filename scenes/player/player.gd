@@ -13,11 +13,10 @@ func _ready():
 func _process(_delta):
 	# Mouse input
 	if Input.is_mouse_button_pressed(1):
-		direction = (global_position - get_global_mouse_position()) / 30
+		direction = (get_global_mouse_position() - global_position).normalized()
 	# Keyboard input (disabled if mouse input is on)
 	else:
 		direction = Input.get_vector("left", "right", "up", "down")
-	print(direction)
 	
 	velocity += direction * speed
 	move_and_slide()
